@@ -19,7 +19,7 @@
               </a>
             {% else %}
               <a 
-                href="{{ site.baseurl_root }}/{% if lang != 'fr' %}{{ lang }}{% endif %}"
+                href="{{ site.baseurl_root }}/{% if lang != 'fr' %}{{ lang }}/{% endif %}"
                 {% if site.lang == lang %}class="active"{% endif %}>
                   {{ lang }}
               </a>
