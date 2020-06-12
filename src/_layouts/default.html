@@ -2,7 +2,7 @@
 <html lang="{{ site.lang }}">
   <head>
     <title>{{ page.title }}</title>
-    <link rel="stylesheet" href="assets/style.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/assets/style.css" type="text/css" media="all" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -13,17 +13,9 @@
         <nav class="languages">
           {% for lang in site.languages %}
             {% if page.namespace %}
-              <a 
-                href="{% tl {{ page.namespace }} {{ lang }} %}"
-                {% if site.lang == lang %}class="active"{% endif %}>
-                  {{ lang }}
-              </a>
+              <a href="{% tl {{ page.namespace }} {{ lang }} %}" {% if site.lang == lang %}class="active"{% endif %}>{{ lang }}</a>
             {% else %}
-              <a 
-                href="{{ site.baseurl_root }}/{% if lang != 'fr' %}{{ lang }}/{% endif %}"
-                {% if site.lang == lang %}class="active"{% endif %}>
-                  {{ lang }}
-              </a>
+              <a href="{{ site.baseurl_root }}/{% if lang != 'fr' %}{{ lang }}/{% endif %}" {% if site.lang == lang %}class="active"{% endif %}>{{ lang }}</a>
             {% endif %}
           {% endfor %}
         </nav>
@@ -31,5 +23,5 @@
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.6.10/lottie_light.min.js"></script>
     <script src="https://cdn.jsdelivr.net/ally.js/1.4.1/ally.min.js"></script>
-    <script src="assets/main.js"></script>
+    <script src="/assets/main.js"></script>
 </html>
