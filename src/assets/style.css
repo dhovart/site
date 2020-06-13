@@ -29,7 +29,6 @@ body.noscroll {
   overflow: hidden;
 }
 
-
 a {
   text-decoration: none;
 }
@@ -69,17 +68,40 @@ a {
   background: transparent;
   display: inline;
   padding: 0;
+  position: relative;
+  transition: color 200ms ease-in;
 }
 
-[data-modal]:hover {
-  border-color: #333;
+[data-modal]:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: -0.2rem;
+  left: -0.5rem;
+  position: absolute;
+  z-index: -1;
+  transform: scale(0.9);
+  border-radius: 1rem;
+  padding: 0.2rem 0.5rem;
+  transition: transform 200ms ease-in, background 200ms ease-in;
+  background: white;
 }
 
-.user-is-tabbing [data-modal]:focus {
-  outline: none;
+[data-modal]:focus {
+  outline: 0;
+}
+
+[data-modal]:hover, .user-is-tabbing [data-modal]:focus {
+  color: white;
+  border-bottom: none;
+  transition: color 200ms ease-out;
+}
+
+[data-modal]:hover:after, .user-is-tabbing [data-modal]:focus:after {
+  transform: scale(1);
   background: #333;
-  color: #fff;
-  border-color: #333;
+  transition: transform 100ms ease-out, background 100ms ease-out;
 }
 
 #logo {
@@ -132,8 +154,10 @@ a {
   background: #333;
 }
 
-.languages a:focus {
-  outline: 0.1rem dotted #000;
+.languages a:hover, .languages a:focus {
+  outline: none;
+  color: #fff;
+  background: #666;
 }
 
 .modal {

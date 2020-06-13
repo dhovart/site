@@ -23,6 +23,7 @@ function onModalButtonClick(event) {
     event.preventDefault();
     const modal = event.target.dataset.modal;
     const modalElement = document.getElementById('modal-' + modal);
+    focusedElementBeforeDialogOpened = document.activeElement;
     modalElement.querySelector('.modal__close').addEventListener('click', closeModal);
     document.body.classList.add('noscroll');
 
@@ -35,7 +36,6 @@ function onModalButtonClick(event) {
     keyHandle = ally.when.key({
         escape: closeModalByKey,
     });
-    focusedElementBeforeDialogOpened = document.activeElement;
 
     ally.when.visibleArea({
         context: modalElement,
