@@ -243,6 +243,8 @@ a {
   line-height: 2.4rem;
   letter-spacing: -0.025rem;
   margin: 0 auto 2.4rem;
+  font-weight: bold;
+  display: block;
 }
 @media (min-width:600px) {
   .modal__title {
