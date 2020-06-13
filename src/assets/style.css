@@ -3,8 +3,8 @@
   font-style: normal;
   font-weight: 400;
   src: local('Fira Sans Regular'), local('FiraSans-Regular'),
-       url('../fonts/fira-sans-v10-latin-regular.woff2') format('woff2'),
-       url('../fonts/fira-sans-v10-latin-regular.woff') format('woff');
+       url('/assets/fonts/fira-sans-v10-latin-regular.woff2') format('woff2'),
+       url('/assets/fonts/fira-sans-v10-latin-regular.woff') format('woff');
 }
 
 @font-face {
@@ -12,8 +12,8 @@
   font-style: normal;
   font-weight: 700;
   src: local('Fira Sans Bold'), local('FiraSans-Bold'),
-       url('../fonts/fira-sans-v10-latin-700.woff2') format('woff2'),
-       url('../fonts/fira-sans-v10-latin-700.woff') format('woff');
+       url('/assets/fonts/fira-sans-v10-latin-700.woff2') format('woff2'),
+       url('/assets/fonts/fira-sans-v10-latin-700.woff') format('woff');
 }
 
 html {
