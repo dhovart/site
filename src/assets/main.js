@@ -4,7 +4,7 @@ lottie.loadAnimation({
     renderer: 'svg',
     loop: false,
     autoplay: true,
-    path: 'assets/animation/logo.json',
+    path: '/assets/animation/logo.json',
     preserveAspectRatio: 'xMidYMid slice'
 });
 
