@@ -58,6 +58,30 @@ a {
   }
 }
 
+.error {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.error h1 {
+  margin: 0 0 1.8rem;
+  font-size: 6rem;
+}
+
+.error p {
+  margin: 0 0 1rem;
+}
+
+.error a {
+  color: #333; 
+  font-size: 1.4rem;
+  text-decoration: underline;
+}
+
 [data-modal] {
   font-weight: bold;
   cursor: pointer;
